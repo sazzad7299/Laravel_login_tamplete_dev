@@ -1,0 +1,79 @@
+.section-login,
+.section-forgot-password,
+.section-password-request {
+  background: url(../images/login_bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--logo {
+    height: 5rem;
+    width: 5rem;
+
+    margin: auto;
+    padding-top: 5rem;
+  }
+
+  &--form {
+    height: calc(100vh - 5rem);
+
+    display: flex;
+    align-items: center;
+
+    .card {
+      font-weight: 700;
+      color: $color-grey--dark;
+
+      &-title {
+        font-size: 3rem;
+
+        display: flex;
+        justify-content: center;
+        padding-top: 5rem;
+      }
+
+      &-body {
+        .form {
+          &-control {
+            padding: 1rem;
+            font-size: 1.4rem;
+          }
+        }
+
+        .links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          margin-top: 4rem;
+
+          a {
+            font-size: 12px;
+            font-weight: 500;
+            padding: 0 3rem;
+
+            &:nth-child(1) {
+              border-right: 1px solid $color-grey--dark;
+            }
+          }
+        }
+
+        .back-button {
+          display: flex;
+          justify-content: center;
+
+          i {
+            font-size: 4rem !important;
+            font-weight: 900;
+            color: $color-grey--light;
+          }
+        }
+      }
+    }
+  }
+
+  &--details {
+    height: calc(100vh - 5rem);
+
+    margin-top: 15rem;
+  }
+}

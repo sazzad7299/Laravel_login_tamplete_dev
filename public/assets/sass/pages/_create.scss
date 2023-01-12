@@ -1,0 +1,131 @@
+.section-dashboard--create {
+  .section-content-details {
+    .card {
+      background-color: $color-white;
+      border-radius: 0.4rem;
+
+      &-header {
+        background-color: $color-white;
+        padding: 1.75rem 1rem;
+
+        h1 {
+          font-weight: 700;
+          font-size: 1.8rem;
+          margin: 0;
+        }
+      }
+      &-body {
+        .card-item {
+          width: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          p {
+            font-size: 1.4rem;
+            font-weight: 400;
+
+            display: flex;
+            align-items: center;
+          }
+
+          .question-icon {
+            font-size: 1.8rem;
+            color: $color-primary;
+            padding-left: 0.75rem;
+          }
+
+          .dropdown {
+            .btn-secondary {
+              width: 35rem;
+              font-size: 1.4rem;
+              font-weight: 400;
+              background-color: $color-grey;
+              color: $color-text;
+
+              &:focus {
+                box-shadow: none !important;
+              }
+            }
+
+            &-menu {
+              width: 100%;
+            }
+
+            &-item {
+              font-size: 1.4rem;
+              font-weight: 400;
+
+              &:active {
+                background-color: #e9ecef;
+                color: $color-text;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .section-order-summary {
+    background-color: $color-white;
+  }
+}
+
+#createFolderModal {
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0); /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+      background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+
+    .card {
+      border: 0;
+
+      .error-message-box {
+        background-color: $color-error;
+        p {
+          font-size: 1.4rem;
+        }
+      }
+
+      &-body {
+        display: flex;
+        align-items: flex-start;
+
+        background-color: $color-white;
+        height: 28rem;
+
+        p {
+          font-size: 1.4rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem 0;
+    border: 0;
+    background-color: $color-grey;
+  }
+}

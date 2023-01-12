@@ -1,0 +1,87 @@
+.section-register {
+  display: flex;
+  height: 100vh;
+
+  background: url(../images/register_bg.svg);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &--left {
+    width: 30vw;
+
+    display: flex;
+    align-items: center;
+
+    ul {
+      list-style: none;
+    }
+
+    ul li::before {
+      content: '\2022';
+      color: #b6e0aa;
+      font-weight: 900;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    .card {
+      margin: 3rem;
+      width: 100%;
+
+      border: 1px solid $color-white;
+      border-radius: 1rem;
+      background-color: transparent;
+
+      &-body {
+        color: $color-white;
+        padding: 2rem;
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: 1.8rem;
+        padding-left: 1.5rem;
+      }
+
+      &-text {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &--right {
+    width: calc(100vw - 30vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: $color-white;
+    padding: 0 23rem;
+
+    .green {
+      color: $color-green;
+    }
+
+    .form {
+      &-control {
+        padding: 1rem;
+        font-size: 1.4rem;
+      }
+    }
+
+    @include respond(tab-land) {
+      padding: 0 15rem;
+    }
+
+    @include respond(tab-port) {
+      width: 100vw;
+      padding: 0 5rem;
+    }
+  }
+}
