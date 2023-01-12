@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700;800&display=swap" rel="stylesheet" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/icons/favicon.ico" />
@@ -30,12 +30,12 @@
 
 <body>
 
-    @if (request()->segment(1) == Null )
+    @if (request()->segment(1) == Null || request()->segment(1) == 'home' )
     <header>
         <nav class="navbar navbar-expand-lg navbar-blue">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/images/logo.png" alt="logo" class="logo" />
+                <a class="navbar-brand" href="{{url('/')}}">
+                    <img src="{{asset('/assets/images/logo.png')}}" alt="logo" class="logo" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
